@@ -3118,6 +3118,24 @@ export const AdminDashboard = (): JSX.Element => {
           </div>
 
           <nav className="flex-1 p-4 overflow-y-auto">
+            <div className="space-y-2">
+              {navItems.map((item) => (
+                <div
+                  key={item.id}
+                  className={`flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer transition-colors ${
+                    item.active
+                      ? 'bg-[#5B52FF] text-white'
+                      : 'text-[#64748B] hover:bg-gray-100'
+                  }`}
+                  onClick={() => setCurrentView(item.id)}
+                >
+                  {item.icon}
+                  <span className="text-sm font-medium">{item.name}</span>
+                </div>
+              ))}
+            </div>
+          </nav>
+
           <div className="p-4">
             <Card className="bg-[#1E293B] text-white">
               <CardContent className="p-4">
@@ -3166,7 +3184,6 @@ export const AdminDashboard = (): JSX.Element => {
                 <div className="flex items-center gap-3">
                   <div className="text-right">
                     <div className="text-sm font-medium text-[#1E293B]">Admin User</div>
-                    <div className="text-xs text-[#64748B]">Administrator</div>
                     <div className="text-xs text-[#64748B]">Administrator</div>
                   </div>
                   <ProfileDropdown
