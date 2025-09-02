@@ -3118,29 +3118,6 @@ export const AdminDashboard = (): JSX.Element => {
           </div>
 
           <nav className="flex-1 p-4 overflow-y-auto">
-            {/* Account Type Switcher */}
-            <div className="mb-4">
-              <AccountTypeSwitcher variant="sidebar" />
-            </div>
-
-            <div className="space-y-1">
-              {navItems.map((item) => (
-                <div
-                  key={item.id}
-                  onClick={() => setCurrentView(item.id)}
-                  className={`px-3 py-2 rounded-lg flex items-center gap-3 cursor-pointer transition-colors text-sm ${
-                    item.active
-                      ? "bg-[#5B52FF] text-white"
-                      : "text-[#64748B] hover:bg-gray-50"
-                  }`}
-                >
-                  {item.icon}
-                  <span className="font-medium">{item.name}</span>
-                </div>
-              ))}
-            </div>
-          </nav>
-
           <div className="p-4">
             <Card className="bg-[#1E293B] text-white">
               <CardContent className="p-4">
