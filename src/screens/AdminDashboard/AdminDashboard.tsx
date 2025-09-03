@@ -3168,6 +3168,7 @@ export const AdminDashboard = (): JSX.Element => {
               <div className="flex items-center gap-4">
                 <AccountTypeSwitcher variant="header" />
                 
+                <div className="relative">
                   <BellIcon className="w-5 h-5 text-[#64748B]" />
                   <Badge className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs flex items-center justify-center p-0">
                     {platformMetrics.fraudAlerts}
@@ -3187,6 +3188,8 @@ export const AdminDashboard = (): JSX.Element => {
                     accountType="admin"
                   />
                 </div>
+              </div>
+            </div>
           </header>
 
           <main className="flex-1 p-6 overflow-y-auto">
